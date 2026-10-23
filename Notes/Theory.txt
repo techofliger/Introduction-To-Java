@@ -1,0 +1,1000 @@
+# Full Java Notes
+
+# 1. Introduction to Java
+
+## What is Java?
+
+Java is a high-level, object-oriented, platform-independent programming language developed by Sun Microsystems (now owned by Oracle).
+
+Java is widely used for:
+
+* Web Development
+* Android App Development
+* Desktop Applications
+* Enterprise Software
+* Banking Systems
+* Cloud Applications
+* Game Development
+
+---
+
+## Features of Java
+
+1. Platform Independent
+2. Object Oriented
+3. Secure
+4. Robust
+5. Multithreaded
+6. Portable
+7. Distributed
+8. Dynamic
+9. High Performance
+
+---
+
+# 2. History of Java
+
+Java was developed by James Gosling in 1995.
+
+Earlier name:
+
+* Oak
+
+Later changed to:
+
+* Java
+
+Java follows:
+
+WORA
+
+Write Once Run Anywhere
+
+---
+
+# 3. Java Editions
+
+## 1. Java SE
+
+Standard Edition
+
+## 2. Java EE
+
+Enterprise Edition
+
+## 3. Java ME
+
+Micro Edition
+
+---
+
+# 4. Java Program Structure
+
+```java
+class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+```
+
+---
+
+## Explanation
+
+### class
+
+Used to create class.
+
+### public
+
+Access modifier.
+
+### static
+
+Method belongs to class.
+
+### void
+
+No return value.
+
+### main()
+
+Starting point of program.
+
+### System.out.println()
+
+Used to print output.
+
+---
+
+# 5. JVM, JRE, JDK
+
+## JVM
+
+Java Virtual Machine
+Runs Java bytecode.
+
+## JRE
+
+Java Runtime Environment
+Provides libraries and JVM.
+
+## JDK
+
+Java Development Kit
+Contains JRE + development tools.
+
+---
+
+# 6. Data Types in Java
+
+## Primitive Data Types
+
+| Data Type | Size       |
+| --------- | ---------- |
+| byte      | 1 byte     |
+| short     | 2 bytes    |
+| int       | 4 bytes    |
+| long      | 8 bytes    |
+| float     | 4 bytes    |
+| double    | 8 bytes    |
+| char      | 2 bytes    |
+| boolean   | true/false |
+
+---
+
+## Example
+
+```java
+class DataType {
+    public static void main(String[] args) {
+        int a = 10;
+        float b = 5.5f;
+        char c = 'A';
+        boolean d = true;
+
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+        System.out.println(d);
+    }
+}
+```
+
+---
+
+# 7. Variables
+
+## Types of Variables
+
+1. Local Variable
+2. Instance Variable
+3. Static Variable
+
+---
+
+## Example
+
+```java
+class Variable {
+    static int a = 10;
+
+    public static void main(String[] args) {
+        int b = 20;
+        System.out.println(a);
+        System.out.println(b);
+    }
+}
+```
+
+---
+
+# 8. Operators in Java
+
+## Arithmetic Operators
+
+```text
++  -  *  /  %
+```
+
+## Relational Operators
+
+```text
+== != > < >= <=
+```
+
+## Logical Operators
+
+```text
+&& || !
+```
+
+## Assignment Operators
+
+```text
+= += -= *= /=
+```
+
+## Increment/Decrement
+
+```text
+++ --
+```
+
+---
+
+# 9. Input in Java
+
+## Scanner Class
+
+```java
+import java.util.Scanner;
+
+class InputExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a;
+
+        System.out.println("Enter number:");
+        a = sc.nextInt();
+
+        System.out.println(a);
+    }
+}
+```
+
+---
+
+# 10. Conditional Statements
+
+## if Statement
+
+```java
+class IfExample {
+    public static void main(String[] args) {
+        int a = 10;
+
+        if(a > 5) {
+            System.out.println("Greater");
+        }
+    }
+}
+```
+
+---
+
+## if-else
+
+```java
+class IfElse {
+    public static void main(String[] args) {
+        int a = 2;
+
+        if(a % 2 == 0)
+            System.out.println("Even");
+        else
+            System.out.println("Odd");
+    }
+}
+```
+
+---
+
+## switch Statement
+
+```java
+class SwitchExample {
+    public static void main(String[] args) {
+        int day = 2;
+
+        switch(day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+
+            case 2:
+                System.out.println("Tuesday");
+                break;
+
+            default:
+                System.out.println("Invalid");
+        }
+    }
+}
+```
+
+---
+
+# 11. Loops in Java
+
+## for Loop
+
+```java
+class ForLoop {
+    public static void main(String[] args) {
+        for(int i=1; i<=5; i++) {
+            System.out.println(i);
+        }
+    }
+}
+```
+
+---
+
+## while Loop
+
+```java
+class WhileLoop {
+    public static void main(String[] args) {
+        int i=1;
+
+        while(i<=5) {
+            System.out.println(i);
+            i++;
+        }
+    }
+}
+```
+
+---
+
+## do-while Loop
+
+```java
+class DoWhile {
+    public static void main(String[] args) {
+        int i=1;
+
+        do {
+            System.out.println(i);
+            i++;
+        } while(i<=5);
+    }
+}
+```
+
+---
+
+# 12. Arrays in Java
+
+## Single Dimensional Array
+
+```java
+class ArrayExample {
+    public static void main(String[] args) {
+        int arr[] = {10,20,30,40};
+
+        for(int i=0; i<arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+}
+```
+
+---
+
+## Multi Dimensional Array
+
+```java
+class MultiArray {
+    public static void main(String[] args) {
+        int arr[][] = {
+            {1,2},
+            {3,4}
+        };
+
+        System.out.println(arr[0][0]);
+    }
+}
+```
+
+---
+
+# 13. Methods in Java
+
+```java
+class MethodExample {
+
+    static void add() {
+        int a = 10;
+        int b = 20;
+
+        System.out.println(a+b);
+    }
+
+    public static void main(String[] args) {
+        add();
+    }
+}
+```
+
+---
+
+# 14. Object Oriented Programming (OOP)
+
+## OOP Concepts
+
+1. Class
+2. Object
+3. Inheritance
+4. Polymorphism
+5. Abstraction
+6. Encapsulation
+
+---
+
+# 15. Class and Object
+
+```java
+class Student {
+    int id = 1;
+    String name = "Shivam";
+
+    void display() {
+        System.out.println(id);
+        System.out.println(name);
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.display();
+    }
+}
+```
+
+---
+
+# 16. Constructor
+
+## Default Constructor
+
+```java
+class Test {
+    Test() {
+        System.out.println("Constructor Called");
+    }
+
+    public static void main(String[] args) {
+        Test t = new Test();
+    }
+}
+```
+
+---
+
+## Parameterized Constructor
+
+```java
+class Student {
+    int id;
+    String name;
+
+    Student(int i, String n) {
+        id = i;
+        name = n;
+    }
+
+    void display() {
+        System.out.println(id + " " + name);
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student(1, "Shivam");
+        s.display();
+    }
+}
+```
+
+---
+
+# 17. Inheritance
+
+```java
+class Animal {
+    void eat() {
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Barking");
+    }
+
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
+        d.bark();
+    }
+}
+```
+
+---
+
+# 18. Types of Inheritance
+
+1. Single Inheritance
+2. Multilevel Inheritance
+3. Hierarchical Inheritance
+
+---
+
+# 19. Method Overloading
+
+```java
+class Overload {
+
+    void add(int a, int b) {
+        System.out.println(a+b);
+    }
+
+    void add(int a, int b, int c) {
+        System.out.println(a+b+c);
+    }
+
+    public static void main(String[] args) {
+        Overload o = new Overload();
+        o.add(10,20);
+        o.add(10,20,30);
+    }
+}
+```
+
+---
+
+# 20. Method Overriding
+
+```java
+class Parent {
+    void show() {
+        System.out.println("Parent");
+    }
+}
+
+class Child extends Parent {
+    void show() {
+        System.out.println("Child");
+    }
+
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.show();
+    }
+}
+```
+
+---
+
+# 21. Encapsulation
+
+```java
+class Student {
+    private int id;
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+}
+```
+
+---
+
+# 22. Abstraction
+
+```java
+abstract class Bike {
+    abstract void run();
+}
+
+class Honda extends Bike {
+    void run() {
+        System.out.println("Running");
+    }
+
+    public static void main(String[] args) {
+        Honda h = new Honda();
+        h.run();
+    }
+}
+```
+
+---
+
+# 23. Interface
+
+```java
+interface Animal {
+    void sound();
+}
+
+class Dog implements Animal {
+    public void sound() {
+        System.out.println("Bark");
+    }
+
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+    }
+}
+```
+
+---
+
+# 24. Packages
+
+```java
+package mypackage;
+
+class Test {
+    public static void main(String[] args) {
+        System.out.println("Package Example");
+    }
+}
+```
+
+---
+
+# 25. Exception Handling
+
+## try-catch
+
+```java
+class ExceptionExample {
+    public static void main(String[] args) {
+        try {
+            int a = 10/0;
+        }
+        catch(Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+```
+
+---
+
+## finally Block
+
+```java
+class FinallyExample {
+    public static void main(String[] args) {
+        try {
+            int a = 10/2;
+        }
+        finally {
+            System.out.println("Always Executes");
+        }
+    }
+}
+```
+
+---
+
+# 26. String in Java
+
+```java
+class StringExample {
+    public static void main(String[] args) {
+        String s = "Java";
+
+        System.out.println(s.length());
+        System.out.println(s.toUpperCase());
+    }
+}
+```
+
+---
+
+# 27. StringBuffer
+
+```java
+class BufferExample {
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer("Hello");
+
+        sb.append(" Java");
+
+        System.out.println(sb);
+    }
+}
+```
+
+---
+
+# 28. Multithreading
+
+```java
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread Running");
+    }
+
+    public static void main(String[] args) {
+        MyThread t = new MyThread();
+        t.start();
+    }
+}
+```
+
+---
+
+# 29. File Handling
+
+```java
+import java.io.File;
+
+class FileExample {
+    public static void main(String[] args) {
+        File f = new File("test.txt");
+
+        System.out.println(f.exists());
+    }
+}
+```
+
+---
+
+# 30. Collections Framework
+
+## ArrayList
+
+```java
+import java.util.ArrayList;
+
+class ArrayListExample {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+
+        list.add("Java");
+        list.add("Python");
+
+        System.out.println(list);
+    }
+}
+```
+
+---
+
+## LinkedList
+
+```java
+import java.util.LinkedList;
+
+class LinkedListExample {
+    public static void main(String[] args) {
+        LinkedList<Integer> list = new LinkedList<>();
+
+        list.add(10);
+        list.add(20);
+
+        System.out.println(list);
+    }
+}
+```
+
+---
+
+## HashMap
+
+```java
+import java.util.HashMap;
+
+class HashMapExample {
+    public static void main(String[] args) {
+        HashMap<Integer, String> map = new HashMap<>();
+
+        map.put(1, "Java");
+        map.put(2, "Python");
+
+        System.out.println(map);
+    }
+}
+```
+
+---
+
+# 31. Java Keywords
+
+Some important Java keywords:
+
+```text
+class
+public
+private
+protected
+static
+void
+int
+float
+double
+boolean
+if
+else
+switch
+for
+while
+do
+break
+continue
+return
+try
+catch
+finally
+new
+this
+super
+extends
+implements
+interface
+abstract
+package
+import
+```
+
+---
+
+# 32. Access Modifiers
+
+| Modifier  | Scope              |
+| --------- | ------------------ |
+| private   | Within class       |
+| default   | Within package     |
+| protected | Package + subclass |
+| public    | Everywhere         |
+
+---
+
+# 33. Important Differences
+
+## JDK vs JRE vs JVM
+
+| JDK             | JRE                 | JVM               |
+| --------------- | ------------------- | ----------------- |
+| Development Kit | Runtime Environment | Executes bytecode |
+
+---
+
+## Method Overloading vs Overriding
+
+| Overloading               | Overriding           |
+| ------------------------- | -------------------- |
+| Same method name          | Same method name     |
+| Different parameters      | Same parameters      |
+| Compile-time polymorphism | Runtime polymorphism |
+
+---
+
+# 34. Java Naming Conventions
+
+## Class Name
+
+PascalCase
+
+Example:
+
+```text
+StudentData
+```
+
+## Method Name
+
+camelCase
+
+Example:
+
+```text
+calculateSum
+```
+
+## Constant
+
+UPPER_CASE
+
+Example:
+
+```text
+MAX_VALUE
+```
+
+---
+
+# 35. Advantages of Java
+
+1. Easy to Learn
+2. Secure
+3. Portable
+4. Object-Oriented
+5. Platform Independent
+6. Huge Community Support
+
+---
+
+# 36. Disadvantages of Java
+
+1. Slower than C/C++
+2. Uses More Memory
+3. Complex GUI
+
+---
+
+# 37. Applications of Java
+
+1. Android Apps
+2. Banking Systems
+3. Web Applications
+4. Desktop Applications
+5. Cloud Systems
+6. Scientific Applications
+
+---
+
+# 38. Java Compilation Process
+
+```text
+Source Code (.java)
+        ↓
+Compiler (javac)
+        ↓
+Bytecode (.class)
+        ↓
+JVM
+        ↓
+Machine Code
+```
+
+---
+
+# 39. Commands in Java
+
+## Compile Program
+
+```bash
+javac Hello.java
+```
+
+## Run Program
+
+```bash
+java Hello
+```
+
+---
+
+# 40. Important Viva Questions
+
+## What is Java?
+
+Java is a high-level object-oriented programming language.
+
+## Who developed Java?
+
+James Gosling.
+
+## What is JVM?
+
+Java Virtual Machine.
+
+## What is inheritance?
+
+Acquiring properties from parent class.
+
+## What is polymorphism?
+
+One task performed in multiple ways.
+
+## Difference between C and Java?
+
+Java is platform independent while C is platform dependent.
+
+---
+
+# 41. Conclusion
+
+Java is one of the most powerful and widely used programming languages in the world. It supports object-oriented programming and is used in Android development, web applications, enterprise systems, and software development.
